@@ -16,7 +16,7 @@ jobs:
         with:
           toolchain: stable
 #           target: x86_64-linux-android
-      - run: rustup target add x86_64-linux-android aarch64-linux-android
+      - run: rustup target add x86_64-linux-android
       - run: ls $ANDROID_HOME/ndk-bundle  
       - run: make config
       - run: cat .cargo/config  
