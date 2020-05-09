@@ -16,9 +16,9 @@ export AARCH64_ANDROID_AR="${NDK_BIN_PATH}/aarch64-linux-android-ar"
 
 config:
 	@mkdir .cargo -p
-	@echo -e "${X86_64_ANDROID_KEY}\nlinker = \"${X86_64_ANDROID_LINKER}\"\nar = \"${X86_64_ANDROID_AR}\"" > .cargo/config
+	@echo "${X86_64_ANDROID_KEY}\nlinker = \"${X86_64_ANDROID_LINKER}\"\nar = \"${X86_64_ANDROID_AR}\"" > .cargo/config
 	@echo >> .cargo/config
-	@echo -e "${AARCH64_ANDROID_KEY}\nlinker = \"${AARCH64_ANDROID_LINKER}\"\nar = \"${AARCH64_ANDROID_AR}\"" >> .cargo/config
+	@echo "${AARCH64_ANDROID_KEY}\nlinker = \"${AARCH64_ANDROID_LINKER}\"\nar = \"${AARCH64_ANDROID_AR}\"" >> .cargo/config
 
 clean:
 	@cargo clean
