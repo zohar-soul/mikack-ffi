@@ -18,6 +18,7 @@ jobs:
 #           target: x86_64-linux-android
       - run: rustup target add x86_64-linux-android
       - run: ls $ANDROID_HOME/ndk-bundle  
+      - run: echo $ANDROID_HOME  
       - run: make config
       - run: cat .cargo/config  
 #       - run: make android  
