@@ -16,13 +16,14 @@ jobs:
         with:
           toolchain: stable
 #           target: x86_64-linux-android
-      - run: rustup target add x86_64-linux-android
-      - run: ls $ANDROID_HOME/ndk-bundle  
-      - run: ls /usr/local/lib/android/sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/  
+#       - run: rustup target add x86_64-linux-android
+#       - run: ls $ANDROID_HOME/ndk-bundle  
+#       - run: ls /usr/local/lib/android/sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/  
       - run: make config
       - run: cat .cargo/config  
 #       - run: make android  
       - run: cargo build --release --all-features
+      - run: ls dist/ 
 #     steps:
 #     - uses: actions/checkout@v2
 #     - name: Build
