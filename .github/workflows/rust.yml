@@ -23,7 +23,11 @@ jobs:
       - run: cat .cargo/config  
 #       - run: make android  
       - run: cargo build --release --all-features
-      - run: ls /home/runner/work/mikack-ffi/mikack-ffi/
+      - run: ls /home/runner/work/mikack-ffi/mikack-ffi/target/
+      - uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: /home/runner/work/mikack-ffi/mikack-ffi/target/  
 #     steps:
 #     - uses: actions/checkout@v2
 #     - name: Build
